@@ -35,7 +35,6 @@ dict_data = {1: {"name":"Bronson", "money":"$0.05"}, 2:{"name":"Masha", "money":
 # Loops and if statements
 
 list1 = [1, 2, 3, 4, 5]
-
 for num in list1:
     if num == 3:
         print("I found three!")
@@ -43,3 +42,8 @@ for num in list1:
         print("Gone too far!")
     else:
         print("Too soon!")
+
+one_hundred = list(range(1, 100))
+for i in one_hundred:
+    if i % 2 == 0:
+        print(i)

@@ -49,5 +49,34 @@ elif age > 25:
 else:
     print("Thanks, but I'm older")
 ```
+## Loops
 ### for loops
+Another powerful tool we can use in our control flow is a loop, and in Python we have two types of loop, the first and the most commonly used of these loops is the `for` loop.
+
+What we do with `for` loops is we define an iterator variable and cycle through a collection of data (lists, dictionaries, even strings) for each entry in the data structure.
+
+Here is how we create a `for` loop
+```
+my_list = [a, b, c]
+
+for i in my_list:
+   # code to execute for each element i in my_list
+```
+As previously mentioned we use `for` loops to cycle through a collection of data (we've used a list in the example above). When creating theses we always use the keywords `for`, obviously indicating that we are making that particular loop, and `in` this keyword is used to link our iterator to our target list. Note that above we set our iterator to `i`, there are no constraints on what we can set our placeholder variable to we can set it like any other variable, however these are conventionally single letters or a word that makes sense (e.g. working with a list call 'dogs', 'dog' would be a suitable placeholder).Note this variable only exists inside the loop as an iterator.
+
+A more concrete example of a `for` loop
+```
+list_data = [1, 2, 3, 4, 5]
+
+for num in list_data:
+     print(num * 2)    # this code will be executed for each element in list_data
+```
+The above will print every number from `list_data` times 2 to our console. Of course, it is very useful to have a tool like this to cycle through this data, especially when these collections are larger! However, there may be instances where we do not wish for our code to be executed for every single element in a collection of data. Suppose we wanted to create a list of numbers from 1 to 100 (not including), but we only wanted even numbers? How do we let Python know to skip odd numbers? We nest `if` statements into our loop!
+```
+even_list = []       # initialize our even numbers list
+for n in range(1, 100):
+    if n % 2 == 0: 
+       even_list.append(n)
+```
+In the example above our iterator is `n`, as you can see we have nested an `if` statement in our loop to evaluate each element within our targeted collection of data, in this case every number from 1 to 99. And of course in this case if the element under evaluation meets the set criteria Python will execute the code indented into the `if` statement.
 
