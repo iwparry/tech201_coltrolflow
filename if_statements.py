@@ -29,3 +29,13 @@ else:
     print("Not a correct rating, please use universal, pg, 12, 12a, 15, 18")
 
 # In Python there are no 'switch statements' or 'case statements'
+
+# Simple example of if, elif and else statements implemented
+my_age = 25
+
+if age == 25:
+    print("Yes! I'm 25 years old")
+elif age > 25:
+    print("No! I'm younger than that")
+else:
+    print("Thanks, but I'm older")
