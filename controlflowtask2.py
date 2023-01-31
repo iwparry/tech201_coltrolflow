@@ -4,8 +4,8 @@ import random
 # Program 1
 # Prompts user for hours worked and rate of pay and calculate gross pay for the week, noting the business
 # pays 1.5 times their rate for hours worked over 40
-# hours = input("Please enter the amount of hours worked this week ") # expecting int
-#
+hours = input("Please enter the amount of hours worked this week ") # expecting int
+
 if hours.isdigit() and int(hours) >= 0 and int(hours) <= 168:
     rate = input("Please enter your hourly rate ")  # can be int or float
     if rate.isnumeric():
@@ -23,8 +23,8 @@ else:
 
 # Program 2
 # Prompt user for a number and return whether the number is odd or even
-# num = input("Please provide a whole number ") # expecting input of data type int
-#
+num = input("Please provide a whole number ") # expecting input of data type int
+
 if num.isdigit() and int(num) % 2 == 0:
     print(f"The number {num} is even!")
 elif num.isdigit() and int(num) % 2 != 0:
@@ -60,7 +60,7 @@ if counter == 3:
 # FizzBuzz - Write program that prints numbers from 1-100
 # But for multiples of 3 print "Fizz" and for multiples of 5 print "Buzz"
 # For multiples of both 3 and 5 print "FizzBuzz":
-# fizzbuzz = list(range(1,101))
+fizzbuzz = list(range(1,101))
 #
 for i in fizzbuzz:
     if i % 3 == 0 and i % 5 != 0: # i is only a multiple of 3
