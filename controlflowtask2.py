@@ -36,25 +36,46 @@ else:
 # Have a variable that is assigned a number between 1 and 20, allow the user to guess up to 3 times
 # informing them if they need to increase or decrease their guess!
 my_num = random.randint(1,20)
-counter = 0
-
 guess = input("Please guess a number between 1 and 20 ")
-if guess.isdigit() and int(guess) > 0 and int(guess) <= 20:
+
+if int(guess) > 0 and int(guess) <= 20:
+    counter = 0
+    if int(guess) == my_num:
+            print("Correct!")
+    else:
+        counter += 1
         if int(guess) > my_num:
-            counter += 1
-            guess = input(f"Too high! You've used {counter} of 3 guesses. Please guess again ")
+            print(f"Too high! Used {counter} of 3 guesses")
+            guess = input("Guess again ")
         elif int(guess) < my_num:
-            counter += 1
-            guess = input(f"Too low! You've used {counter} of 3 guesses. Please guess again ")
+            print(f"Too low! Used {counter} of 3 guesses")
+            guess = input("Guess again ")
         else:
-            print(f"Correct! The number was {my_num}")
-
+            print("Correct!")
+        if counter == 3:
+            print("Game over!")
+        else:
+            counter += 1
+            if int(guess) > my_num:
+                print(f"Too high! Used {counter} of 3 guesses")
+                guess = input("Guess again ")
+            elif int(guess) < my_num:
+                print(f"Too low! Used {counter} of 3 guesses")
+                guess = input("Guess again ")
+            else:
+                print("Correct!")
+            if counter == 3:
+                print("Game over!")
+            else:
+                counter += 1
+                if int(guess) > my_num:
+                    print(f"Too high! Used {counter} of 3 guesses")
+                elif int(guess) < my_num:
+                    print(f"Too low! Used {counter} of 3 guesses")
+                if counter == 3:
+                    print("Game over!")
 else:
-        print("We need a whole number between 1 and 20")
-
-if counter == 3:
-        print("Game over!")
-
+    print("We need a whole number between 1 and 20")
 
 # Program 4
 # FizzBuzz - Write program that prints numbers from 1-100
