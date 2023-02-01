@@ -30,7 +30,7 @@ dict_data = {1: {"name":"Bronson", "money":"$0.05"}, 2:{"name":"Masha", "money":
 #         print(embed_value)
 #
 # for items in dict_data.values():
-#     print(items["money"]) # returns just the values correspinding to "money" keys
+#     print(items["money"]) # returns just the values corresponding to "money" keys
 
 # Loops and if statements
 

@@ -80,3 +80,12 @@ for n in range(1, 100):
 ```
 In the example above our iterator is `n`, as you can see we have nested an `if` statement in our loop to evaluate each element within our targeted collection of data, in this case every number from 1 to 99. And of course in this case if the element under evaluation meets the set criteria Python will execute the code indented into the `if` statement.
 
+Speaking of nesting, we are also able to nest `for` loops within loops we've created. This is especially useful when dealing with embedded lists and dictionaries (lists/dictionaries that contain more lists/dictionaries). Take below for example.
+```
+dict_data = {1: {"name":"Bronson", "money":"$0.05"}, 2:{"name":"Masha", "money":"$3.66"}, 3:{"name":"Roscoe", "money":"$1.14"}}
+
+for item in dict_data.values():
+    for embed_value in item.values():   # nested loop
+        print(embed_value)
+```
+As you can see, `dict_data` is a dictionary where the values are dictionaries themselves. Suppose we simply wanted to print each value from the embedded dictionaries to our console i.e. `Bronson`, `$0.05` etc. We create a nested loop, where in our first loop we are telling Python to cycle over the values of `dict_data`, the embedded dictionaries, and in our nested loop, we are telling Python to cycle through the values contained in each embedded dictionary and print them to our console.
