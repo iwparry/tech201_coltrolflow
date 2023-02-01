@@ -2,12 +2,12 @@
 A Control Flow in Python is simply a controlled decision-making process set by us for the program to follow
 ### if statements
 One of the most basic and most used of our control flow tools is the '`if` statement' written as
-```
+```Python
 if "condition to be met is met (is True)":
    "code to be executed" 
 ```
 Here we tell Python to look at a condition, or a statement, and evaluate whether or not its true. If the condition is met, then Python will execute the code in the indentation. Note that the indentation is requirement or Python will give us an `IndentationError`. Let's look at an actual example say evaluating whether an induvidual is of suitable age to watch a movie
-```
+```Python
 age = 19
 if age >= 18:
    print("You are the correct age to watch this film and can buy a ticket")
@@ -18,7 +18,7 @@ In the example above there really isn't much going on because we have one simple
 So how do we expand our control flow to consider other conditions? That's where `elif` and `else` statements come in.
 ### elif and else statements
 While we can simply write multiple `if` statements to cover all the conditions we wish to consider the `elif` and `else` statements give us a way to combine the conditions into one control flow decision-making process as opposed to splitting up our criteria into separate `if` statements. Below is an expanded example using film ratings!
-```
+```Python
 film_rating = "universal"
 
 if film_rating == "universal":
@@ -39,7 +39,7 @@ In our code block above we have an `if` statement followed by a series of `elif`
 So what do they actually do? `elif` allows us to introduce other conditions to our control flow and an instruction to be executed should our `if` statement's condition isn't met, and as we can see we can add as many `elif`'s as we want, it's up to us how specific we want our control flow to be. Of course looking at the above example we know there are only a few film ratings, however we could assign absolutely anything to our `film_rating` variable, and we know we don't have the time to write an `elif` statement for every possible value! So after we know we've covered the conditions we care about, i.e. every valid film rating in our example, we can end our control flow process with an `else` statement, this simply executes an instruction in the circumstance that none of the previous conditions of the control flow have been met. 
 
 Here's a simple example showing `if`, `elif`, and `else` being utilised.
-```
+```Python
 my_age = 25
 
 if age == 25:
@@ -56,7 +56,7 @@ Another powerful tool we can use in our control flow is a loop, and in Python we
 What we do with `for` loops is we define an iterator variable and cycle through a collection of data (lists, dictionaries, even strings) for each entry in the data structure.
 
 Here is how we create a `for` loop
-```
+```Python
 my_list = [a, b, c]
 
 for i in my_list:
@@ -65,14 +65,14 @@ for i in my_list:
 As previously mentioned we use `for` loops to cycle through a collection of data (we've used a list in the example above). When creating theses we always use the keywords `for`, obviously indicating that we are making that particular loop, and `in` this keyword is used to link our iterator to our target list. Note that above we set our iterator to `i`, there are no constraints on what we can set our placeholder variable to we can set it like any other variable, however these are conventionally single letters or a word that makes sense (e.g. working with a list call 'dogs', 'dog' would be a suitable placeholder).Note this variable only exists inside the loop as an iterator.
 
 A more concrete example of a `for` loop
-```
+```Python
 list_data = [1, 2, 3, 4, 5]
 
 for num in list_data:
      print(num * 2)    # this code will be executed for each element in list_data
 ```
 The above will print every number from `list_data` times 2 to our console. Of course, it is very useful to have a tool like this to cycle through this data, especially when these collections are larger! However, there may be instances where we do not wish for our code to be executed for every single element in a collection of data. Suppose we wanted to create a list of numbers from 1 to 100 (not including), but we only wanted even numbers? How do we let Python know to skip odd numbers? We nest `if` statements into our loop!
-```
+```Python
 even_list = []       # initialize our even numbers list
 for n in range(1, 100):
     if n % 2 == 0: 
@@ -81,7 +81,7 @@ for n in range(1, 100):
 In the example above our iterator is `n`, as you can see we have nested an `if` statement in our loop to evaluate each element within our targeted collection of data, in this case every number from 1 to 99. And of course in this case if the element under evaluation meets the set criteria Python will execute the code indented into the `if` statement.
 
 Speaking of nesting, we are also able to nest `for` loops within loops we've created. This is especially useful when dealing with embedded lists and dictionaries (lists/dictionaries that contain more lists/dictionaries). Take below for example.
-```
+```Python
 dict_data = {1: {"name":"Bronson", "money":"$0.05"}, 2:{"name":"Masha", "money":"$3.66"}, 3:{"name":"Roscoe", "money":"$1.14"}}
 
 for item in dict_data.values():
